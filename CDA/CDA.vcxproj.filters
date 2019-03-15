@@ -4,6 +4,9 @@
     <Filter Include="CDA">
       <UniqueIdentifier>{EDD8870B-59E2-877C-E25D-9E7C4E66937C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CDA\Events">
+      <UniqueIdentifier>{3198ACFD-1D50-EE4A-8657-C7A6722E893B}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\CDA.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\CDA\EntryPoint.h">
       <Filter>CDA</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CDA\Events\ApplicationEvent.h">
+      <Filter>CDA\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CDA\Events\Event.h">
+      <Filter>CDA\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CDA\Events\KeyEvent.h">
+      <Filter>CDA\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CDA\Events\MouseEvent.h">
+      <Filter>CDA\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\CDA\Log.h">
       <Filter>CDA</Filter>

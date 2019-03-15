@@ -9,8 +9,8 @@ int main(int argc, char** argv) {
 
 	CDA::Log::Init();
 	CDA_CORE_WARN("Initialized Log!");
-	int a = 5;
-	CDA_INFO("Hello! Var={0}", a);
+	//int a = 5;
+	//CDA_INFO("Hello! Var={0}", a);
 
 	auto app = CDA::CreateApplication();
 	app->Run();
