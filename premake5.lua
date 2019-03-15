@@ -18,6 +18,9 @@ project "CDA"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "cdapch.h"
+	pchsource "CDA/src/cdapch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

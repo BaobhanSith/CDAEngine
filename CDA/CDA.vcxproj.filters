@@ -34,6 +34,7 @@
     <ClInclude Include="src\CDA\Log.h">
       <Filter>CDA</Filter>
     </ClInclude>
+    <ClInclude Include="src\cdapch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CDA\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\CDA\Log.cpp">
       <Filter>CDA</Filter>
     </ClCompile>
+    <ClCompile Include="src\cdapch.cpp" />
   </ItemGroup>
 </Project>
