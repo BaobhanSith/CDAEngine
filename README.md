@@ -10,7 +10,14 @@ Over the course of development, I'll be getting opinions and ideas from budding 
 
 Make sure to stay tuned for more progress! I'll be showing progress off in the Virtus Learning Hub (https://discord.gg/hs37bev) and the Indie Uprising (https://discord.gg/tkfjPXn) discord servers.
 
-CURRENT ENGINE VERSION: 0.0.1 (NO VISIBLE PROGRESS)
+CURRENT ENGINE VERSION: 0.0.2 (NO VISIBLE PROGRESS)
+
+CHANGE LOG:
+	v0.0.2
+		- Added GLFW
+		- Created a window
+		- Fixed some bugs
+		- Tracked events
 
 LINK TO TheChernoProject GAME ENGINE SERIES: https://www.youtube.com/watch?v=JxIZbV_XjAs&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT
 
@@ -21,3 +28,5 @@ TheChernoProject
 spdlog -https://github.com/gabime/spdlog
 
 premake-core -https://github.com/premake/premake-core
+
+glfw (branch) -https://github.com/ReeceTait/glfw

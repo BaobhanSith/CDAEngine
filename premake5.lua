@@ -10,6 +10,11 @@ workspace "CDA"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "CDA/vendor/GLFW/include"
+
+include "CDA/vendor/GLFW"
+
 project "CDA"
 	location "CDA"
 	kind "SharedLib"
@@ -30,7 +35,13 @@ project "CDA"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -51,14 +62,17 @@ project "CDA"
 
 	filter "configurations:Debug"
 		defines "CDA_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "CDA_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "CDA_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -98,10 +112,12 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "CDA_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "CDA_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"

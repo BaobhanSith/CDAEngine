@@ -23,7 +23,7 @@ namespace CDA {
 		EVENT_CLASS_TYPE(MouseMoved)
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	private:
-		float m_MouseX, m_MouseY
+		float m_MouseX, m_MouseY;
 	};
 
 	class CDA_API MouseScrolledEvent : public Event {

@@ -1,3 +1,6 @@
 [submodule "CDA/vendor/spdlog"]
 	path = CDA/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "CDA/vendor/GLFW"]
+	path = CDA/vendor/GLFW
+	url = https://github.com/ReeceTait/glfw
