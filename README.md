@@ -13,6 +13,7 @@ Make sure to stay tuned for more progress! I'll be showing progress off in the V
 CURRENT ENGINE VERSION: 0.0.2 (NO VISIBLE PROGRESS)
 
 CHANGE LOG:
+
 v0.0.2
 - Added GLFW
 - Created a window
