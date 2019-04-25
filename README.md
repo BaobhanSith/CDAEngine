@@ -19,6 +19,7 @@ v0.0.2
 - Created a window
 - Fixed some bugs
 - Tracked events
+- Added GLAD
 
 LINK TO TheChernoProject GAME ENGINE SERIES: https://www.youtube.com/watch?v=JxIZbV_XjAs&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT
 
