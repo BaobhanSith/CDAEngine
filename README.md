@@ -12,12 +12,12 @@ Make sure to stay tuned for more progress! I'll be showing progress off in the V
 
 CURRENT ENGINE VERSION: 0.0.2 (NO VISIBLE PROGRESS)
 
-#CHANGE LOG:
-	v0.0.2
-		- Added GLFW
-		- Created a window
-		- Fixed some bugs
-		- Tracked events
+CHANGE LOG:
+v0.0.2
+- Added GLFW
+- Created a window
+- Fixed some bugs
+- Tracked events
 
 LINK TO TheChernoProject GAME ENGINE SERIES: https://www.youtube.com/watch?v=JxIZbV_XjAs&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT
 
