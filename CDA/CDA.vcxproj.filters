@@ -7,8 +7,14 @@
     <Filter Include="CDA\Events">
       <UniqueIdentifier>{3198ACFD-1D50-EE4A-8657-C7A6722E893B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CDA\ImGui">
+      <UniqueIdentifier>{D78BBC2E-43F6-70A5-8C34-224BF8DD4EFA}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="src\CDA\Events\MouseEvent.h">
       <Filter>CDA\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\CDA\ImGui\ImGuiLayer.h">
+      <Filter>CDA\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\CDA\Layer.h">
       <Filter>CDA</Filter>
     </ClInclude>
@@ -49,6 +58,9 @@
     <ClInclude Include="src\CDA\Window.h">
       <Filter>CDA</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGL_Renderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -58,6 +70,9 @@
     <ClCompile Include="src\CDA\Application.cpp">
       <Filter>CDA</Filter>
     </ClCompile>
+    <ClCompile Include="src\CDA\ImGui\ImGuiLayer.cpp">
+      <Filter>CDA\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\CDA\Layer.cpp">
       <Filter>CDA</Filter>
     </ClCompile>
@@ -66,6 +81,9 @@
     </ClCompile>
     <ClCompile Include="src\CDA\Log.cpp">
       <Filter>CDA</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGL_Renderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>

@@ -5,6 +5,7 @@
 #include "CDA/Application.h"
 #include "CDA/Layer.h"
 #include "CDA/Log.h"
+#include "CDA/ImGui/ImGuiLayer.h"
 
 // ---Entry Point --------------------
 #include "CDA/EntryPoint.h"

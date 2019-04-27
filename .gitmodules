@@ -4,3 +4,6 @@
 [submodule "CDA/vendor/GLFW"]
 	path = CDA/vendor/GLFW
 	url = https://github.com/ReeceTait/glfw
+[submodule "CDA/vendor/imgui"]
+	path = CDA/vendor/imgui
+	url = https://github.com/ReeceTait/imgui

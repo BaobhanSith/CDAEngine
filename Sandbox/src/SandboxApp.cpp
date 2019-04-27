@@ -12,7 +12,7 @@ public:
 	}
 
 	void OnEvent(CDA::Event& event) override {
-		CDA_TRACE("{0}", event);
+		//CDA_TRACE("{0}", event);
 	}
 };
 
@@ -20,6 +20,7 @@ class Sandbox : public CDA::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new CDA::ImGuiLayer());
 	}
 
 	~Sandbox() {
