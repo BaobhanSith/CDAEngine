@@ -10,6 +10,10 @@
 	#error CDA only supports windows!
 #endif
 
+#ifdef CDA_DEBUG
+	#define CDA_ENABLE_ASSERTS
+#endif
+
 #ifdef CDA_ENABLE_ASSERTS
 	#define CDA_ASSERTS(x, ...) {if(!(x)) {CDA_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
 	#define CDA_CORE_ASSERTS(x, ...) {if(!(x)) {CDA_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
@@ -19,3 +23,5 @@
 #endif
 
 #define BIT(x) (1 << x)
+
+#define CDA_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)

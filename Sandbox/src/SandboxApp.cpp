@@ -8,7 +8,7 @@ public:
 	}
 
 	void OnUpdate() override {
-		CDA_INFO("ExampleLayer::Update");
+		//CDA_INFO("ExampleLayer::Update");
 	}
 
 	void OnEvent(CDA::Event& event) override {

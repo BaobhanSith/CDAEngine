@@ -24,6 +24,8 @@ Make sure to stay tuned for more progress! I'll be showing progress off in the V
 # v0.0.3
 - Added in ImGui
 - Created ImGui window
+- Added ImGui events
+- Went bug hunting
 
 LINK TO TheChernoProject GAME ENGINE SERIES: https://www.youtube.com/watch?v=JxIZbV_XjAs&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT
 
