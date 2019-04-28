@@ -9,7 +9,7 @@ public:
 
 	void OnUpdate() override {
 		if (CDA::Input::IsKeyPressed(CDA_KEY_TAB)) {
-			CDA_TRACE("Tav key is pressed!");
+			CDA_TRACE("Tab key is pressed!");
 		}
 	}
 

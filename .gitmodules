@@ -7,3 +7,6 @@
 [submodule "CDA/vendor/imgui"]
 	path = CDA/vendor/imgui
 	url = https://github.com/ReeceTait/imgui
+[submodule "CDA/vendor/glm"]
+	path = CDA/vendor/glm
+	url = https://github.com/g-truc/glm

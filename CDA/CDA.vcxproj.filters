@@ -46,6 +46,12 @@
     <ClInclude Include="src\CDA\ImGui\ImGuiLayer.h">
       <Filter>CDA\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\CDA\Input.h">
+      <Filter>CDA</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CDA\KeyCodes.h">
+      <Filter>CDA</Filter>
+    </ClInclude>
     <ClInclude Include="src\CDA\Layer.h">
       <Filter>CDA</Filter>
     </ClInclude>
@@ -55,20 +61,22 @@
     <ClInclude Include="src\CDA\Log.h">
       <Filter>CDA</Filter>
     </ClInclude>
+    <ClInclude Include="src\CDA\MouseButtonCodes.h">
+      <Filter>CDA</Filter>
+    </ClInclude>
     <ClInclude Include="src\CDA\Window.h">
       <Filter>CDA</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGL_Renderer.h">
       <Filter>Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\cdapch.h" />
-    <ClInclude Include="src\CDA\Input.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
-    <ClInclude Include="src\CDA\MouseButtonCodes.h" />
-    <ClInclude Include="src\CDA\KeyCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CDA\Application.cpp">
@@ -89,10 +97,12 @@
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGL_Renderer.cpp">
       <Filter>Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\cdapch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>
