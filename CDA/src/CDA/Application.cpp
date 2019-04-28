@@ -2,6 +2,7 @@
 #include "Application.h"
 
 #include "CDA/Log.h"
+#include "Input.h"
 
 #include <glad/glad.h>
 

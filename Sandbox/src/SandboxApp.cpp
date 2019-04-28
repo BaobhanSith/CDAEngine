@@ -8,11 +8,16 @@ public:
 	}
 
 	void OnUpdate() override {
-		//CDA_INFO("ExampleLayer::Update");
+		if (CDA::Input::IsKeyPressed(CDA_KEY_TAB)) {
+			CDA_TRACE("Tav key is pressed!");
+		}
 	}
 
 	void OnEvent(CDA::Event& event) override {
-		//CDA_TRACE("{0}", event);
+		if (event.GetEventType() == CDA::EventType::KeyPressed) {
+			CDA::KeyPressedEvent& e = (CDA::KeyPressedEvent&)event;
+			CDA_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 };
 

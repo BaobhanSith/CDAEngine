@@ -65,6 +65,10 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\cdapch.h" />
+    <ClInclude Include="src\CDA\Input.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\CDA\MouseButtonCodes.h" />
+    <ClInclude Include="src\CDA\KeyCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CDA\Application.cpp">
@@ -89,5 +93,6 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\cdapch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>
