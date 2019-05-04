@@ -6,6 +6,7 @@
 #include "CDA/LayerStack.h"
 #include "Events/Event.h"
 #include "CDA/Events/ApplicationEvent.h"
+#include "CDA/ImGui/ImGuiLayer.h"
 
 namespace CDA {
 
@@ -28,6 +29,7 @@ namespace CDA {
 		bool OnWindowClosed(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:

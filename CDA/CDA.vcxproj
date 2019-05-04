@@ -165,18 +165,17 @@
     <ClInclude Include="src\CDA\Log.h" />
     <ClInclude Include="src\CDA\MouseButtonCodes.h" />
     <ClInclude Include="src\CDA\Window.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGL_Renderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\cdapch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CDA\Application.cpp" />
+    <ClCompile Include="src\CDA\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\CDA\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\CDA\Layer.cpp" />
     <ClCompile Include="src\CDA\LayerStack.cpp" />
     <ClCompile Include="src\CDA\Log.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGL_Renderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\cdapch.cpp">
@@ -197,4 +196,4 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-</Project>
+</Project> 

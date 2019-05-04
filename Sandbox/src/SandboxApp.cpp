@@ -25,7 +25,6 @@ class Sandbox : public CDA::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
-		PushOverlay(new CDA::ImGuiLayer());
 	}
 
 	~Sandbox() {
