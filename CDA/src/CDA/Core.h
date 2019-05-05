@@ -1,10 +1,14 @@
 #pragma once
 
 #ifdef CDA_PLATFORM_WINDOWS
-	#ifdef CDA_BUILD_DLL
-		#define CDA_API __declspec(dllexport)
+	#if CDA_DYNAMIC_LINK
+		#ifdef CDA_BUILD_DLL
+			#define CDA_API __declspec(dllexport)
+		#else
+			#define CDA_API __declspec(dllimport)
+		#endif
 	#else
-		#define CDA_API __declspec(dllimport)
+		#define CDA_API
 	#endif
 #else
 	#error CDA only supports windows!

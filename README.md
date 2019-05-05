@@ -10,7 +10,7 @@ Over the course of development, I'll be getting opinions and ideas from budding 
 
 Make sure to stay tuned for more progress! I'll be showing progress off in the Virtus Learning Hub (https://discord.gg/hs37bev) and the Indie Uprising (https://discord.gg/tkfjPXn) discord servers.
 
-# CURRENT ENGINE VERSION: 0.0.4 (Uninteractable Window)
+# CURRENT ENGINE VERSION: 0.0.5 (Interactable Window)
 
 ## CHANGE LOG:
 
@@ -29,6 +29,16 @@ Make sure to stay tuned for more progress! I'll be showing progress off in the V
 
 ### v0.0.4
 - Created input system
+
+### v0.0.5
+- Added support for ImGui docking
+- The ImGui window can now be interacted with
+- Converted CDA from a dynamic library to a static library
+- Fixed all warnings
+
+# WHAT'S NEXT?
+
+## RENDERING
 
 LINK TO TheChernoProject GAME ENGINE SERIES: https://www.youtube.com/watch?v=JxIZbV_XjAs&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT
 

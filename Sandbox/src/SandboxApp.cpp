@@ -1,37 +1,57 @@
 #include <CDA.h>
 
-class ExampleLayer : public CDA::Layer {
+#include "imgui/imgui.h"
+
+class ExampleLayer : public CDA::Layer
+{
 public:
 	ExampleLayer()
-		: Layer("Example") {
-
+		: Layer("Example")
+	{
 	}
 
-	void OnUpdate() override {
-		if (CDA::Input::IsKeyPressed(CDA_KEY_TAB)) {
-			CDA_TRACE("Tab key is pressed!");
-		}
+	void OnUpdate() override
+	{
+		if (CDA::Input::IsKeyPressed(CDA_KEY_TAB))
+			CDA_TRACE("Tab key is pressed (poll)!");
 	}
 
-	void OnEvent(CDA::Event& event) override {
-		if (event.GetEventType() == CDA::EventType::KeyPressed) {
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::End();
+	}
+
+	void OnEvent(CDA::Event& event) override
+	{
+		if (event.GetEventType() == CDA::EventType::KeyPressed)
+		{
 			CDA::KeyPressedEvent& e = (CDA::KeyPressedEvent&)event;
+			if (e.GetKeyCode() == CDA_KEY_TAB)
+				CDA_TRACE("Tab key is pressed (event)!");
 			CDA_TRACE("{0}", (char)e.GetKeyCode());
 		}
 	}
+
 };
 
-class Sandbox : public CDA::Application {
+class Sandbox : public CDA::Application
+{
 public:
-	Sandbox() {
+	Sandbox()
+	{
 		PushLayer(new ExampleLayer());
 	}
 
-	~Sandbox() {
+	~Sandbox()
+	{
 
 	}
+
 };
 
-CDA::Application* CDA::CreateApplication() {
+CDA::Application* CDA::CreateApplication()
+{
 	return new Sandbox();
 }
