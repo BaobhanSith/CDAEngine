@@ -10,41 +10,41 @@ Over the course of development, I'll be getting opinions and ideas from budding 
 
 Make sure to stay tuned for more progress! I'll be showing progress off in the Virtus Learning Hub (https://discord.gg/hs37bev) and the Indie Uprising (https://discord.gg/tkfjPXn) discord servers.
 
-# CURRENT ENGINE VERSION: 0.0.5 (Interactable Window)
+# CURRENT ENGINE VERSION: 0.0.6 (Rendering Update)
 
 ## CHANGE LOG:
 
-### v0.0.2
+### v0.0.2 (Window Update)
 - Added GLFW
 - Created a window
 - Fixed some bugs
 - Tracked events
 - Added GLAD
 
-### v0.0.3
+### v0.0.3 (ImGui Update)
 - Added in ImGui
 - Created ImGui window
 - Added ImGui events
 - Went bug hunting
 
-### v0.0.4
+### v0.0.4 (Input Update)
 - Created input system
 
-### v0.0.5
+### v0.0.5 (Repairing Update)
 - Added support for ImGui docking
 - The ImGui window can now be interacted with
 - Converted CDA from a dynamic library to a static library
 - Fixed all warnings
 
-# WHAT'S NEXT?
+### v0.0.6 (Rendering Update)
+- Created rendering context
 
-## RENDERING
-
-LINK TO TheChernoProject GAME ENGINE SERIES: https://www.youtube.com/watch?v=JxIZbV_XjAs&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT
 
 # CREDITS AND LIBRARIES USED:
 
 TheChernoProject
+
+LINK TO TheChernoProject GAME ENGINE SERIES: https://www.youtube.com/watch?v=JxIZbV_XjAs&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT
 
 - spdlog -https://github.com/gabime/spdlog
 

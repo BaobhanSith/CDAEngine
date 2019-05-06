@@ -5,8 +5,7 @@
 #include "CDA/Events/Event.h"
 #include "CDA/Events/KeyEvent.h"
 #include "CDA/Events/MouseEvent.h"
-
-#include <glad/glad.h>
+#include "Platform/OpenGL/OpenGLContext.h"
 
 namespace CDA {
 	static bool s_GLFWInitialized = false;
@@ -32,6 +31,7 @@ namespace CDA {
 		m_Data.Width = props.Width;
 		m_Data.Height = props.Height;
 
+
 		CDA_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 
 		if (!s_GLFWInitialized) {
@@ -43,9 +43,10 @@ namespace CDA {
 		}
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
-		glfwMakeContextCurrent(m_Window);
-		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-		CDA_CORE_ASSERTS(status, "Failed to initialize Glad!");
+		
+		m_Context = new OpenGLContext(m_Window);
+		m_Context->Init();
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
@@ -141,7 +142,7 @@ namespace CDA {
 
 	void WindowsWindow::OnUpdate() {
 		glfwPollEvents();
-		glfwSwapBuffers(m_Window);
+		m_Context->SwapBuffers();
 	}
 
 	void WindowsWindow::SetVSync(bool enabled) {
