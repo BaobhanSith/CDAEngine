@@ -38,6 +38,8 @@ Make sure to stay tuned for more progress! I'll be showing progress off in the V
 
 ### v0.0.6 (Rendering Update)
 - Created rendering context
+- Created test render triangle
+- Created GPU Log System
 
 
 # CREDITS AND LIBRARIES USED:
