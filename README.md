@@ -40,6 +40,7 @@ Make sure to stay tuned for more progress! I'll be showing progress off in the V
 - Created rendering context
 - Created test render triangle
 - Created GPU Log System
+- Created shader compiling system
 
 
 # CREDITS AND LIBRARIES USED:

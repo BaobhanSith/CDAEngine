@@ -73,6 +73,7 @@
     <ClInclude Include="src\cdapch.h" />
     <ClInclude Include="src\CDA\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\CDA\Renderer\Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CDA\Application.cpp">
@@ -101,5 +102,6 @@
     </ClCompile>
     <ClCompile Include="src\cdapch.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\CDA\Renderer\Shader.cpp" />
   </ItemGroup>
 </Project>

@@ -8,6 +8,7 @@
 #include "CDA/Events/ApplicationEvent.h"
 #include "CDA/ImGui/ImGuiLayer.h"
 
+#include "Renderer/Shader.h"
 namespace CDA {
 
 	class CDA_API Application
@@ -34,6 +35,8 @@ namespace CDA {
 		LayerStack m_LayerStack;
 
 		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+
+		std::unique_ptr<Shader> m_Shader;
 	private:
 		static Application* s_Instance;
 	};

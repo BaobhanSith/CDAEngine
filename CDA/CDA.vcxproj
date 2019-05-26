@@ -156,6 +156,7 @@
     <ClInclude Include="src\CDA\Log.h" />
     <ClInclude Include="src\CDA\MouseButtonCodes.h" />
     <ClInclude Include="src\CDA\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\CDA\Renderer\Shader.h" />
     <ClInclude Include="src\CDA\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
@@ -169,6 +170,7 @@
     <ClCompile Include="src\CDA\Layer.cpp" />
     <ClCompile Include="src\CDA\LayerStack.cpp" />
     <ClCompile Include="src\CDA\Log.cpp" />
+    <ClCompile Include="src\CDA\Renderer\Shader.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
