@@ -41,6 +41,7 @@ Make sure to stay tuned for more progress! I'll be showing progress off in the V
 - Created test render triangle
 - Created GPU Log System
 - Created shader compiling system
+- Added buffer layout descriptors for vertex buffers
 
 
 # CREDITS AND LIBRARIES USED:

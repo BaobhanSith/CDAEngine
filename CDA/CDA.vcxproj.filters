@@ -10,8 +10,14 @@
     <Filter Include="CDA\ImGui">
       <UniqueIdentifier>{D78BBC2E-43F6-70A5-8C34-224BF8DD4EFA}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CDA\Renderer">
+      <UniqueIdentifier>{33772E12-1FDA-BDB6-C85F-F66CB4A18939}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
@@ -61,8 +67,26 @@
     <ClInclude Include="src\CDA\MouseButtonCodes.h">
       <Filter>CDA</Filter>
     </ClInclude>
+    <ClInclude Include="src\CDA\Renderer\Buffer.h">
+      <Filter>CDA\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CDA\Renderer\GraphicsContext.h">
+      <Filter>CDA\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CDA\Renderer\Renderer.h">
+      <Filter>CDA\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CDA\Renderer\Shader.h">
+      <Filter>CDA\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\CDA\Window.h">
       <Filter>CDA</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h">
+      <Filter>Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsInput.h">
       <Filter>Platform\Windows</Filter>
@@ -71,9 +95,6 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\cdapch.h" />
-    <ClInclude Include="src\CDA\Renderer\GraphicsContext.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
-    <ClInclude Include="src\CDA\Renderer\Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CDA\Application.cpp">
@@ -94,6 +115,21 @@
     <ClCompile Include="src\CDA\Log.cpp">
       <Filter>CDA</Filter>
     </ClCompile>
+    <ClCompile Include="src\CDA\Renderer\Buffer.cpp">
+      <Filter>CDA\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CDA\Renderer\Renderer.cpp">
+      <Filter>CDA\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CDA\Renderer\Shader.cpp">
+      <Filter>CDA\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
@@ -101,7 +137,5 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\cdapch.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
-    <ClCompile Include="src\CDA\Renderer\Shader.cpp" />
   </ItemGroup>
 </Project>
