@@ -159,9 +159,11 @@
     <ClInclude Include="src\CDA\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\CDA\Renderer\Renderer.h" />
     <ClInclude Include="src\CDA\Renderer\Shader.h" />
+    <ClInclude Include="src\CDA\Renderer\VertexArray.h" />
     <ClInclude Include="src\CDA\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\cdapch.h" />
@@ -176,8 +178,10 @@
     <ClCompile Include="src\CDA\Renderer\Buffer.cpp" />
     <ClCompile Include="src\CDA\Renderer\Renderer.cpp" />
     <ClCompile Include="src\CDA\Renderer\Shader.cpp" />
+    <ClCompile Include="src\CDA\Renderer\VertexArray.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\cdapch.cpp">
@@ -198,4 +202,4 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-</Project> 
+</Project>
