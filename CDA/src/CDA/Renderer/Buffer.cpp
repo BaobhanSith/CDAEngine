@@ -11,8 +11,8 @@ namespace CDA {
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::None:    CDA_CORE_ASSERTS(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::OpenGL:  return new OpenGLVertexBuffer(vertices, size);
+		case RendererAPI::API::None:    CDA_CORE_ASSERTS(false, "RendererAPI::None is currently not supported!"); return nullptr;
+		case RendererAPI::API::OpenGL:  return new OpenGLVertexBuffer(vertices, size);
 		}
 
 		CDA_CORE_ASSERTS(false, "Unknown RendererAPI!");
@@ -23,8 +23,8 @@ namespace CDA {
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::None:    CDA_CORE_ASSERTS(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::OpenGL:  return new OpenGLIndexBuffer(indices, size);
+		case RendererAPI::API::None:    CDA_CORE_ASSERTS(false, "RendererAPI::None is currently not supported!"); return nullptr;
+		case RendererAPI::API::OpenGL:  return new OpenGLIndexBuffer(indices, size);
 		}
 
 		CDA_CORE_ASSERTS(false, "Unknown RendererAPI!");

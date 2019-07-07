@@ -97,6 +97,10 @@
     <ClInclude Include="src\cdapch.h" />
     <ClInclude Include="src\CDA\Renderer\VertexArray.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h" />
+    <ClInclude Include="src\CDA\Renderer\RendererAPI.h" />
+    <ClInclude Include="src\CDA\Renderer\RenderCommand.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
+    <ClInclude Include="src\CDA\Renderer\OrthographicCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CDA\Application.cpp">
@@ -141,5 +145,9 @@
     <ClCompile Include="src\cdapch.cpp" />
     <ClCompile Include="src\CDA\Renderer\VertexArray.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
+    <ClCompile Include="src\CDA\Renderer\RendererAPI.cpp" />
+    <ClCompile Include="src\CDA\Renderer\RenderCommand.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
+    <ClCompile Include="src\CDA\Renderer\OrthographicCamera.cpp" />
   </ItemGroup>
 </Project>

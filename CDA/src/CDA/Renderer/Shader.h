@@ -1,6 +1,7 @@
 #pragma once
 
 #include <String>
+#include <glm/glm.hpp>
 
 namespace CDA {
 	class Shader {
@@ -10,6 +11,8 @@ namespace CDA {
 
 		void Bind() const;
 		void Unbind() const;
+
+		void UploadUniformMat4(const std::string& name, const glm::mat4& matrix);
 	private:
 		uint32_t m_RendererID;
 	};
