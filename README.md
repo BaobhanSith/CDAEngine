@@ -43,6 +43,7 @@ Make sure to stay tuned for more progress! I'll be showing progress off in the V
 - Created shader compiling system
 - Added buffer layout descriptors for vertex buffers
 - Added support for vertex arrays
+- Created orthographic camera and moved code from "Application.cpp" to "SandboxApp.cpp"
 
 
 # CREDITS AND LIBRARIES USED:
