@@ -3,6 +3,8 @@
 #include "CDA/Core.h"
 #include "CDA/Events/Event.h"
 
+#include "CDA/Core/Timestep.h"
+
 namespace CDA {
 	class CDA_API Layer
 	{
@@ -12,7 +14,7 @@ namespace CDA {
 
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate() {}
+		virtual void OnUpdate(Timestep ts) {}
 		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}
 

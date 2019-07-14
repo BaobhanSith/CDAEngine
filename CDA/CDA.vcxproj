@@ -143,6 +143,7 @@
     <ClInclude Include="src\CDA.h" />
     <ClInclude Include="src\CDA\Application.h" />
     <ClInclude Include="src\CDA\Core.h" />
+    <ClInclude Include="src\CDA\Core\Timestep.h" />
     <ClInclude Include="src\CDA\EntryPoint.h" />
     <ClInclude Include="src\CDA\Events\ApplicationEvent.h" />
     <ClInclude Include="src\CDA\Events\Event.h" />

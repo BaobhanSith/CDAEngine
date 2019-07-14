@@ -101,6 +101,7 @@
     <ClInclude Include="src\CDA\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\CDA\Renderer\OrthographicCamera.h" />
+    <ClInclude Include="src\CDA\Core\Timestep.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CDA\Application.cpp">

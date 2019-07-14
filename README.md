@@ -44,6 +44,7 @@ Make sure to stay tuned for more progress! I'll be showing progress off in the V
 - Added buffer layout descriptors for vertex buffers
 - Added support for vertex arrays
 - Created orthographic camera and moved code from "Application.cpp" to "SandboxApp.cpp"
+- Added in delta time factoring for movement system and added in ability to transform objects
 
 
 # CREDITS AND LIBRARIES USED:

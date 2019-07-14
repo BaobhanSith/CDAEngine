@@ -7,6 +7,7 @@
 #include "Events/Event.h"
 #include "CDA/Events/ApplicationEvent.h"
 #include "CDA/ImGui/ImGuiLayer.h"
+#include "CDA/Core/Timestep.h"
 
 namespace CDA {
 
@@ -27,11 +28,12 @@ namespace CDA {
 		inline static Application& Get() { return *s_Instance; }
 	private:
 		bool OnWindowClosed(WindowCloseEvent& e);
-
+	private:
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
+		float m_LastFrameTime = 0.0f;
 	private:
 		static Application* s_Instance;
 	};
