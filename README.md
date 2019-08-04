@@ -48,6 +48,7 @@ Make sure to stay tuned for more progress! I'll be showing progress off in the V
 
 ### v0.0.7 (Material Update)
 - Began work on material system
+- Created shader abstracting system and added in color picker wheel for squares
 
 
 # CREDITS AND LIBRARIES USED:

@@ -2,6 +2,9 @@
 
 #include "imgui/imgui.h"
 #include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
+#include "Platform/OpenGL/OpenGLShader.h"
 
 class ExampleLayer : public CDA::Layer
 {
@@ -89,7 +92,7 @@ public:
 			}
 		)";
 
-		m_Shader.reset(new CDA::Shader(vertexSrc, fragmentSrc));
+		m_Shader.reset(CDA::Shader::Create(vertexSrc, fragmentSrc));
 
 		std::string flatColorVertexSrc = R"(
 			#version 330 core
@@ -114,16 +117,16 @@ public:
 			in vec3 v_Position;
 			in vec4 v_Color;
 
-			uniform vec4 u_Color;
+			uniform vec3 u_Color;
 
 			void main()
 			{
 				color = vec4(v_Position * 0.5 + 0.5, 1.0);
-				color = u_Color;
+				color = vec4(u_Color, 0.0f);
 			}
 		)";
 
-		m_flatColorShader.reset(new CDA::Shader(flatColorVertexSrc, flatColorShaderFragmentSrc));
+		m_flatColorShader.reset(CDA::Shader::Create(flatColorVertexSrc, flatColorShaderFragmentSrc));
 	}
 
 	void OnUpdate(CDA::Timestep ts) override
@@ -156,19 +159,13 @@ public:
 
 		CDA::Renderer::BeginScene(m_Camera);
 
-		glm::vec4 redColor( 0.8f, 0.2f, 0.3f, 1.0f);
-		glm::vec4 blueColor(0.2f, 0.3f, 0.8f, 1.0f);
+		std::dynamic_pointer_cast<CDA::OpenGLShader>(m_flatColorShader)->Bind();
+		std::dynamic_pointer_cast<CDA::OpenGLShader>(m_flatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
 
 		for (int y = 0; y < 20; y++) {
 			for (int x = 0; x < 20; x++) {
 				glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
 				glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * scale;
-				if (x % 2 == 0) {
-					m_flatColorShader->UploadUniformFloat4("u_Color", redColor);
-				}
-				else {
-					m_flatColorShader->UploadUniformFloat4("u_Color", blueColor);
-				}
 				CDA::Renderer::Submit(m_flatColorShader, m_SquareVA, transform);
 			}
 		}
@@ -180,7 +177,9 @@ public:
 
 	virtual void OnImGuiRender() override
 	{
-		
+		ImGui::Begin("Settings");
+		ImGui::ColorEdit3("Square Color", glm::value_ptr(m_SquareColor));
+		ImGui::End();
 	}
 
 	void OnEvent(CDA::Event& event) override
@@ -200,6 +199,8 @@ private:
 
 	float m_CameraRotation = 0.0f;
 	float m_CameraRotationSpeed = 180.0f;
+
+	glm::vec3 m_SquareColor = { 0.2f, 0.3f, 0.8f };
 };
 
 class Sandbox : public CDA::Application
