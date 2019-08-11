@@ -4,6 +4,9 @@
     <Filter Include="CDA">
       <UniqueIdentifier>{EDD8870B-59E2-877C-E25D-9E7C4E66937C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CDA\Core">
+      <UniqueIdentifier>{65997E5E-5166-D969-7A7F-C71166AB0EF8}</UniqueIdentifier>
+    </Filter>
     <Filter Include="CDA\Events">
       <UniqueIdentifier>{3198ACFD-1D50-EE4A-8657-C7A6722E893B}</UniqueIdentifier>
     </Filter>
@@ -30,6 +33,9 @@
     </ClInclude>
     <ClInclude Include="src\CDA\Core.h">
       <Filter>CDA</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CDA\Core\Timestep.h">
+      <Filter>CDA\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\CDA\EntryPoint.h">
       <Filter>CDA</Filter>
@@ -73,10 +79,22 @@
     <ClInclude Include="src\CDA\Renderer\GraphicsContext.h">
       <Filter>CDA\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\CDA\Renderer\OrthographicCamera.h">
+      <Filter>CDA\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CDA\Renderer\RenderCommand.h">
+      <Filter>CDA\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\CDA\Renderer\Renderer.h">
       <Filter>CDA\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\CDA\Renderer\RendererAPI.h">
+      <Filter>CDA\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\CDA\Renderer\Shader.h">
+      <Filter>CDA\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CDA\Renderer\VertexArray.h">
       <Filter>CDA\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\CDA\Window.h">
@@ -88,6 +106,15 @@
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h">
       <Filter>Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsInput.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -95,14 +122,6 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\cdapch.h" />
-    <ClInclude Include="src\CDA\Renderer\VertexArray.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h" />
-    <ClInclude Include="src\CDA\Renderer\RendererAPI.h" />
-    <ClInclude Include="src\CDA\Renderer\RenderCommand.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
-    <ClInclude Include="src\CDA\Renderer\OrthographicCamera.h" />
-    <ClInclude Include="src\CDA\Core\Timestep.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CDA\Application.cpp">
@@ -126,16 +145,37 @@
     <ClCompile Include="src\CDA\Renderer\Buffer.cpp">
       <Filter>CDA\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\CDA\Renderer\OrthographicCamera.cpp">
+      <Filter>CDA\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CDA\Renderer\RenderCommand.cpp">
+      <Filter>CDA\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\CDA\Renderer\Renderer.cpp">
       <Filter>CDA\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\CDA\Renderer\RendererAPI.cpp">
+      <Filter>CDA\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\CDA\Renderer\Shader.cpp">
+      <Filter>CDA\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CDA\Renderer\VertexArray.cpp">
       <Filter>CDA\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
       <Filter>Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp">
       <Filter>Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
@@ -145,12 +185,5 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\cdapch.cpp" />
-    <ClCompile Include="src\CDA\Renderer\VertexArray.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
-    <ClCompile Include="src\CDA\Renderer\RendererAPI.cpp" />
-    <ClCompile Include="src\CDA\Renderer\RenderCommand.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
-    <ClCompile Include="src\CDA\Renderer\OrthographicCamera.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp" />
   </ItemGroup>
 </Project>

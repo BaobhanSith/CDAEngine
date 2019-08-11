@@ -20,7 +20,7 @@ public:
 			 0.0f,  0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
 		};
 
-		std::shared_ptr<CDA::VertexBuffer> vertexBuffer;
+		CDA::Ref<CDA::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(CDA::VertexBuffer::Create(vertices, sizeof(vertices)));
 
 		CDA::BufferLayout layout = {
@@ -32,7 +32,7 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		std::shared_ptr<CDA::IndexBuffer> indexBuffer;
+		CDA::Ref<CDA::IndexBuffer> indexBuffer;
 		indexBuffer.reset(CDA::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
@@ -45,7 +45,7 @@ public:
 			-0.5f,  0.5f, 0.0f
 		};
 
-		std::shared_ptr<CDA::VertexBuffer> squareVB;
+		CDA::Ref<CDA::VertexBuffer> squareVB;
 		squareVB.reset(CDA::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 		squareVB->SetLayout({
 			{ CDA::ShaderDataType::Float3, "a_Position" }
@@ -53,7 +53,7 @@ public:
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		std::shared_ptr<CDA::IndexBuffer> squareIB;
+		CDA::Ref<CDA::IndexBuffer> squareIB;
 		squareIB.reset(CDA::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
@@ -85,10 +85,13 @@ public:
 			in vec3 v_Position;
 			in vec4 v_Color;
 
+			uniform vec3 u_Color;
+
 			void main()
 			{
 				color = vec4(v_Position * 0.5 + 0.5, 1.0);
 				color = v_Color;
+				color = vec4(u_Color * v_Position + 0.5, 1.0);
 			}
 		)";
 
@@ -121,8 +124,8 @@ public:
 
 			void main()
 			{
-				color = vec4(v_Position * 0.5 + 0.5, 1.0);
-				color = vec4(u_Color, 0.0f);
+				color = vec4(v_Position * 0.5, 1.0);
+				color = vec4(u_Color, 1.0f);
 			}
 		)";
 
@@ -151,13 +154,16 @@ public:
 		glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 		
 
-		CDA::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
+		CDA::RenderCommand::SetClearColor(glm::vec4(m_BackgroundColor, 1.0f));
 		CDA::RenderCommand::Clear();
 
 		m_Camera.SetPosition(m_CameraPosition);
 		m_Camera.SetRotation(m_CameraRotation);
 
 		CDA::Renderer::BeginScene(m_Camera);
+
+		std::dynamic_pointer_cast<CDA::OpenGLShader>(m_Shader)->Bind();
+		std::dynamic_pointer_cast<CDA::OpenGLShader>(m_Shader)->UploadUniformFloat3("u_Color", m_TriangleColor);
 
 		std::dynamic_pointer_cast<CDA::OpenGLShader>(m_flatColorShader)->Bind();
 		std::dynamic_pointer_cast<CDA::OpenGLShader>(m_flatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
@@ -179,6 +185,8 @@ public:
 	{
 		ImGui::Begin("Settings");
 		ImGui::ColorEdit3("Square Color", glm::value_ptr(m_SquareColor));
+		ImGui::ColorEdit3("Triangle Color", glm::value_ptr(m_TriangleColor));
+		ImGui::ColorEdit3("Background Color", glm::value_ptr(m_BackgroundColor));
 		ImGui::End();
 	}
 
@@ -187,11 +195,11 @@ public:
 	}
 
 private:
-	std::shared_ptr<CDA::Shader> m_Shader;
-	std::shared_ptr<CDA::VertexArray> m_VertexArray;
+	CDA::Ref<CDA::Shader> m_Shader;
+	CDA::Ref<CDA::VertexArray> m_VertexArray;
 
-	std::shared_ptr<CDA::VertexArray> m_SquareVA;
-	std::shared_ptr<CDA::Shader> m_flatColorShader;
+	CDA::Ref<CDA::VertexArray> m_SquareVA;
+	CDA::Ref<CDA::Shader> m_flatColorShader;
 
 	CDA::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
@@ -201,6 +209,8 @@ private:
 	float m_CameraRotationSpeed = 180.0f;
 
 	glm::vec3 m_SquareColor = { 0.2f, 0.3f, 0.8f };
+	glm::vec3 m_TriangleColor = { 0.4f, 0.6f, 0.4f };
+	glm::vec3 m_BackgroundColor = { 0.1f, 0.1f, 0.1f };
 };
 
 class Sandbox : public CDA::Application
