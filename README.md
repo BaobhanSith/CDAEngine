@@ -50,6 +50,8 @@ Make sure to stay tuned for more progress! I'll be showing progress off in the V
 - Began work on material system
 - Created shader abstracting system and added in color picker wheel for squares
 - Created Ref and Scope definition and added color picker for background and triangle
+- Added in support for texture importing and added in stb_image.h
+- Added in support for alpha textures
 
 
 # CREDITS AND LIBRARIES USED:
@@ -67,3 +69,5 @@ LINK TO TheChernoProject GAME ENGINE SERIES: https://www.youtube.com/watch?v=JxI
 - ImGui (branch) -https://github.com/ReeceTait/imgui
 
 - OpenGL Mathematics -https://github.com/g-truc/glm
+
+- stb_image -https://github.com/nobodys/stb

@@ -24,6 +24,7 @@
 
 #include "CDA/Renderer/Buffer.h"
 #include "CDA/Renderer/Shader.h"
+#include "CDA/Renderer/Texture.h"
 #include "CDA/Renderer/VertexArray.h"
 
 #include "CDA/Renderer/OrthographicCamera.h"
