@@ -52,6 +52,7 @@ Make sure to stay tuned for more progress! I'll be showing progress off in the V
 - Created Ref and Scope definition and added color picker for background and triangle
 - Added in support for texture importing and added in stb_image.h
 - Added in support for alpha textures
+- Added support for shader asset files
 
 
 # CREDITS AND LIBRARIES USED:
