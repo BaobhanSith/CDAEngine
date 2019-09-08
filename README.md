@@ -53,6 +53,7 @@ Make sure to stay tuned for more progress! I'll be showing progress off in the V
 - Added in support for texture importing and added in stb_image.h
 - Added in support for alpha textures
 - Added support for shader asset files
+- Added shader library support
 
 
 # CREDITS AND LIBRARIES USED:

@@ -96,7 +96,7 @@ public:
 			}
 		)";
 
-		m_Shader.reset(CDA::Shader::Create(vertexSrc, fragmentSrc));
+		m_Shader = CDA::Shader::Create("VertexPosColor", vertexSrc, fragmentSrc);
 
 		std::string flatColorVertexSrc = R"(
 			#version 330 core
@@ -130,14 +130,14 @@ public:
 			}
 		)";
 
-		m_flatColorShader.reset(CDA::Shader::Create(flatColorVertexSrc, flatColorShaderFragmentSrc));
+		m_flatColorShader = CDA::Shader::Create("FlatColor", flatColorVertexSrc, flatColorShaderFragmentSrc);
 
-		m_TextureShader.reset(CDA::Shader::Create("assets/shaders/Texture.glsl"));
+		auto TextureShader = m_ShaderLibrary.Load("assets/shaders/Texture.glsl");
 		m_Texture = CDA::Texture2D::Create("assets/textures/Checkerboard.png");
 		m_ChernoLogoTexture = CDA::Texture2D::Create("assets/textures/Logo.png");
 
-		std::dynamic_pointer_cast<CDA::OpenGLShader>(m_TextureShader)->Bind();
-		std::dynamic_pointer_cast<CDA::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
+		std::dynamic_pointer_cast<CDA::OpenGLShader>(TextureShader)->Bind();
+		std::dynamic_pointer_cast<CDA::OpenGLShader>(TextureShader)->UploadUniformInt("u_Texture", 0);
 	}
 
 	void OnUpdate(CDA::Timestep ts) override
@@ -186,11 +186,13 @@ public:
 
 		//CDA::Renderer::Submit(m_Shader, m_VertexArray);
 
+		auto textureShader = m_ShaderLibrary.Get("Texture");
+
 		m_Texture->Bind();
-		CDA::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		CDA::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		m_ChernoLogoTexture->Bind();
-		CDA::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		CDA::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		CDA::Renderer::EndScene();
 	}
@@ -209,11 +211,12 @@ public:
 	}
 
 private:
+	CDA::ShaderLibrary m_ShaderLibrary;
 	CDA::Ref<CDA::Shader> m_Shader;
 	CDA::Ref<CDA::VertexArray> m_VertexArray;
 
 	CDA::Ref<CDA::VertexArray> m_SquareVA;
-	CDA::Ref<CDA::Shader> m_flatColorShader, m_TextureShader;
+	CDA::Ref<CDA::Shader> m_flatColorShader;
 
 	CDA::Ref<CDA::Texture2D> m_Texture, m_ChernoLogoTexture;
 
