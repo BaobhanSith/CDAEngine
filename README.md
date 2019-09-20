@@ -54,6 +54,7 @@ Make sure to stay tuned for more progress! I'll be showing progress off in the V
 - Added in support for alpha textures
 - Added support for shader asset files
 - Added shader library support
+- Reworked camera system
 
 
 # CREDITS AND LIBRARIES USED:
