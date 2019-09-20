@@ -15,6 +15,8 @@
 #include "CDA/KeyCodes.h"
 #include "CDA/MouseButtonCodes.h"
 
+#include "CDA/OrthographicCameraController.h"
+
 #include "CDA/ImGui/ImGuiLayer.h"
 // -----------------------------------
 
